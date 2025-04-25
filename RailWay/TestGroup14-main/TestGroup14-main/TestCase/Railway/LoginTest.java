@@ -78,7 +78,11 @@ public class LoginTest {
                 e.printStackTrace();
             }
         }
-
+        try {
+            Thread.sleep(5000); 
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         // Lấy message lỗi sau lần login thứ 4
         String actualMessage = String.valueOf(loginPage.getLblLoginErrorMsg());
         String expectedMessage = "You have used 4 out of 5 login attempts. After all 5 have been used, you will be unable to login for 15 minutes.";
