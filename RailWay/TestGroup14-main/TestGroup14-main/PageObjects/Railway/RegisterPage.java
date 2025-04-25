@@ -44,6 +44,8 @@ public class RegisterPage {
         this.getTxtPassword().sendKeys(password);
         this.getTxtConfirmPassword().sendKeys(confirmPassword);
         this.getTxtPid().sendKeys(pid);
+        WebElement registerButton = this.getBtnRegister();
+        ((JavascriptExecutor) Constant.WEBDRIVER).executeScript("arguments[0].scrollIntoView(true);", registerButton);
         this.getBtnRegister().click();
     }
 
