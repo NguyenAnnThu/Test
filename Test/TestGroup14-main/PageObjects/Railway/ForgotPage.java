@@ -23,7 +23,7 @@ public class ForgotPage {
         WebElement emailField = getTxtEmail();
         WebElement btnSend = getBtnSend();
 
-        emailField.clear(); // Gợi ý thêm để đảm bảo trường email trống trước khi nhập
+        emailField.clear(); 
         emailField.sendKeys(email);
         JavascriptExecutor js = (JavascriptExecutor) Constant.WEBDRIVER;
         js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
